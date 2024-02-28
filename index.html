@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone Hunter</title>
+</head>
+<body>
+    <header class="max-w-[1170px] m-auto">
+        <h3 class="text-4xl">Phone Hunter API:</h3>
+    </header>
+    <br><br>
+    <main>
+        <section class="max-w-[1170px] m-auto">
+            <input id="inputBox" type="text" placeholder="Enter Text to Search" class="input input-bordered w-full max-w-xs" />
+            <button onclick="getSearch()" class="btn btn-accent">Search</button>
+
+            <!-- loader -->
+            <div>
+                
+            </div>
+
+            <br>
+            <div class="">
+                <div class="text-center ">
+                    <span id="loadingSpin" class="loading loading-ring loading-lg text-center hidden"></span>
+                </div>
+                <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-auto">
+                    
+                </div>
+                <div class="w-full text-center m-auto">
+                     <button onclick="showAllBtn()" id="showAll" class="btn btn-accent  text-center hidden ">Show All</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="details-container">
+                <img src="" alt="">
+                <p></p>
+            </div>
+            
+            <div class="modal-action">
+            <form method="dialog">
+                <button class="btn">Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+    </footer>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
